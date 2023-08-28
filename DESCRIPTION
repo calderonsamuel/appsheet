@@ -1,0 +1,11 @@
+Package: appsheet
+Title: Interact with the AppSheet API
+Version: 0.0.0.9000
+Authors@R: 
+    person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-6847-1210"))
+Description: Use the AppSheet API to Add, Delete, Read and Update table records in tables related to your AppSheet apps.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
