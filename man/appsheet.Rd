@@ -17,11 +17,13 @@ appsheet(
 \arguments{
 \item{tableName}{The name of the table to perform actions on.}
 
-\item{Action}{The action to be performed on the table. Default is "Find".}
+\item{Action}{The action to be performed on the table. Default is "Find", which reads a table.}
 
 \item{Properties}{A list of properties for the action. Default is a list with Locale set to "en-US".}
 
 \item{Rows}{A list of rows for the action. Default is an empty list.}
+
+\item{Selector}{Expression to select and format the rows returned. Only valid when Action is "Find".}
 
 \item{appId}{The AppSheet application ID. Default is retrieved from the APPSHEET_APP_ID environment variable.}
 
@@ -32,8 +34,12 @@ A data frame containing the response from the AppSheet API.
 }
 \description{
 This function interacts with the AppSheet API to perform actions on a specified table.
+For more info, check the \href{https://support.google.com/appsheet/answer/10105768?hl=en&ref_topic=10105767&sjid=5773035771729381163-SA}{official documentation}.
 }
 \examples{
-app_data <- appsheet("my_table", Action = "Find", Properties = list(Locale = "en-US"))
+\dontrun{
+appsheet("my_table")
+appsheet("my_table", Properties = list(Locale = "en-US"))
+}
 
 }
