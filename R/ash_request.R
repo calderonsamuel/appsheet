@@ -10,15 +10,15 @@ ash_request <- function(
 	
 	req_body <- ash_req_body(Action = Action, Properties = Properties, Rows = Rows, Selector = Selector)
 	
-	httr2::request("https://api.appsheet.com") |>
-		httr2::req_url_path_append("api") |>
-		httr2::req_url_path_append("v2") |>
-		httr2::req_url_path_append("apps") |>
-		httr2::req_url_path_append(appId) |>
-		httr2::req_url_path_append("tables") |>
-		httr2::req_url_path_append(tableName) |>
-		httr2::req_url_path_append("Action") |>
-		httr2::req_headers(ApplicationAccessKey = access_key) |>
+	httr2::request("https://api.appsheet.com") %>%
+		httr2::req_url_path_append("api") %>%
+		httr2::req_url_path_append("v2") %>%
+		httr2::req_url_path_append("apps") %>%
+		httr2::req_url_path_append(appId) %>%
+		httr2::req_url_path_append("tables") %>%
+		httr2::req_url_path_append(tableName) %>%
+		httr2::req_url_path_append("Action") %>%
+		httr2::req_headers(ApplicationAccessKey = access_key) %>%
 		httr2::req_body_json(req_body) 
 }
 
@@ -43,7 +43,7 @@ ash_req_body <- function(Action = "Find", Properties = list(Locale = "en-US"), R
 		Properties = Properties,
 		Rows = Rows,
 		Selector = Selector
-	) |> 
+	) %>% 
 		purrr::discard(is.null)
 }
 

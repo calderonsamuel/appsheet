@@ -10,8 +10,10 @@
 #' @param access_key The AppSheet application access key. Default is retrieved from the APPSHEET_APP_ACCESS_KEY environment variable.
 #'
 #' @return A data frame containing the response from the AppSheet API.
-#'
+#' 
 #' @export
+#' 
+#' @importFrom magrittr %>%
 #' 
 #' @examples
 #' app_data <- appsheet("my_table", Action = "Find", Properties = list(Locale = "en-US"))
@@ -35,11 +37,11 @@ appsheet <- function(
 			access_key = access_key
 		)
 	
-	response <- request |> 
-		httr2::req_perform() |> 
+	response <- request %>% 
+		httr2::req_perform() %>% 
 		httr2::resp_body_json() 
 	
-	response |> 
-		lapply(tibble::as_tibble) |> 
+	response %>% 
+		lapply(tibble::as_tibble) %>% 
 		purrr::list_rbind()
 }
