@@ -39,6 +39,8 @@ jobs:
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      APPSHEET_APP_ID: ${{ secrets.APPSHEET_APP_ID }}
+      APPSHEET_APP_ACCESS_KEY: ${{ secrets.APPSHEET_APP_ACCESS_KEY }}
       R_KEEP_PKG_SOURCE: yes
 
     steps:

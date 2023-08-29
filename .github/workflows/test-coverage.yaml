@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      APPSHEET_APP_ID: ${{ secrets.APPSHEET_APP_ID }}
+      APPSHEET_APP_ACCESS_KEY: ${{ secrets.APPSHEET_APP_ACCESS_KEY }}
 
     steps:
       - uses: actions/checkout@v3
@@ -27,9 +29,6 @@ jobs:
           needs: coverage
 
       - name: Test coverage
-        env:
-          APPSHEET_APP_ID: ${{ secrets.APPSHEET_APP_ID }}
-          APPSHEET_APP_ACCESS_KEY: ${{ secrets.APPSHEET_APP_ACCESS_KEY }}
         run: |
           covr::codecov(
             quiet = FALSE,
