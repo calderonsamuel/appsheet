@@ -3,11 +3,12 @@ ash_request <- function(
 		Action = "Find", 
 		Properties = list(Locale = "en-US"), 
 		Rows = list(),
+		Selector = NULL,
 		appId = Sys.getenv("APPSHEET_APP_ID"),
 		access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 ) {
 	
-	req_body <- ash_req_body(Action = Action, Properties = Properties, Rows = Rows)
+	req_body <- ash_req_body(Action = Action, Properties = Properties, Rows = Rows, Selector = Selector)
 	
 	httr2::request("https://api.appsheet.com") |>
 		httr2::req_url_path_append("api") |>
@@ -21,14 +22,20 @@ ash_request <- function(
 		httr2::req_body_json(req_body) 
 }
 
-ash_req_body <- function(Action = "Find", Properties = list(Locale = "en-US"), Rows = list()) {
+ash_req_body <- function(Action = "Find", Properties = list(Locale = "en-US"), Rows = list(), Selector = NULL) {
+	
 	good_actions <- c("Find", "Add", "Delete", "Edit")
+	
 	if(!Action %in% good_actions) {
 		cli::cli_abort('{.code Action} must be one of {good_actions}')
 	}
 	
 	if(rlang::is_empty(Properties))  {
 		cli::cli_warn('Empty {.code Properties} might return an empty response')
+	}
+	
+	if (!is.null(Selector) && Action != "Find") {
+		cli::cli_abort('{.code Selector} only works with a Find action')
 	}
 	
 	list(
