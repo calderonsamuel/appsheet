@@ -41,8 +41,10 @@ ash_req_body <- function(Action = "Find", Properties = list(Locale = "en-US"), R
 	list(
 		Action = Action,
 		Properties = Properties,
-		Rows = Rows
-	)
+		Rows = Rows,
+		Selector = Selector
+	) |> 
+		purrr::discard(is.null)
 }
 
 

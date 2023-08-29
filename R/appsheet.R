@@ -21,10 +21,19 @@ appsheet <- function(
 		Action = "Find", 
 		Properties = list(Locale = "en-US"), 
 		Rows = list(),
+		Selector = NULL,
 		appId = Sys.getenv("APPSHEET_APP_ID"),
 		access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 ) {
-	request <- ash_request(tableName, Action, Properties, Rows, appId, access_key)
+	request <- ash_request(
+			tableName = tableName,
+			Action = Action,
+			Properties = Properties,
+			Rows = Rows,
+			Selector = Selector,
+			appId = appId,
+			access_key = access_key
+		)
 	
 	response <- request |> 
 		httr2::req_perform() |> 
