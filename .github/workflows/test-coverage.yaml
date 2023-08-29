@@ -27,6 +27,9 @@ jobs:
           needs: coverage
 
       - name: Test coverage
+        env:
+          APPSHEET_APP_ID: ${{ secrets.APPSHEET_APP_ID }}
+          APPSHEET_APP_ACCESS_KEY: ${{ secrets.APPSHEET_APP_ACCESS_KEY }}
         run: |
           covr::codecov(
             quiet = FALSE,
