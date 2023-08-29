@@ -12,6 +12,7 @@ BugReports: https://github.com/calderonsamuel/appsheet/issues
 Imports: 
     cli,
     httr2,
+    magrittr,
     purrr,
     rlang,
     tibble
