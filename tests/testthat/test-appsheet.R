@@ -6,3 +6,8 @@ test_that("defaults work ok", {
 		class = "data.frame"
 	)
 })
+
+test_that("fails without credentials", {
+	expect_error(appsheet("Driver", appId = ""))
+	expect_error(appsheet("Driver", access_key = ""))
+})

@@ -8,6 +8,10 @@ ash_request <- function(
 		access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 ) {
 	
+	if (appId == "") cli::cli_abort("Must provide {.code appId}")
+	if (access_key == "") cli::cli_abort("Must provide {.code access_key}")
+	
+	
 	req_body <- ash_req_body(Action = Action, Properties = Properties, Rows = Rows, Selector = Selector)
 	
 	httr2::request("https://api.appsheet.com") %>%
