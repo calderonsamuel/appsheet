@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# appsheet
+
+<!-- badges: start -->
+[![Codecov test coverage](https://codecov.io/gh/calderonsamuel/appsheet/branch/main/graph/badge.svg)](https://app.codecov.io/gh/calderonsamuel/appsheet?branch=main)
+[![R-CMD-check](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+The goal of appsheet is to provide an easy way to use the Appsheet API to retrieve, add, update and delete rows from your app tables. The package exports a single function called `appsheet()`, which you can use to perform all the supported actions.
+
+## Installation
+
+You can install the development version of appsheet from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("calderonsamuel/appsheet")
+```
+
+## Authentication
+
+The first step is to [Enable the API for cloud-based service communication](https://support.google.com/appsheet/answer/10105769?hl=en&ref_topic=10105767&sjid=7476345061548698748-SA). Once this is done you should have:
+
+1. The App ID. Use it in the `appId` argument of `appsheet()` or via the `APPSHEET_APP_ID` environmental variable.
+2. The Application Access Key. Use it in the `access_key` argument of `appsheet()` or via the `APPSHEET_APP_ACCESS_KEY` environmental variable.
+
+The `appsheet()` function looks for both environmental variables by default.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(appsheet)
+
+# Find all the content of the "Driver" table
+appsheet("Driver")
+```
+
+

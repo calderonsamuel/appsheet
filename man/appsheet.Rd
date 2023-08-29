@@ -9,6 +9,7 @@ appsheet(
   Action = "Find",
   Properties = list(Locale = "en-US"),
   Rows = list(),
+  Selector = NULL,
   appId = Sys.getenv("APPSHEET_APP_ID"),
   access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 )

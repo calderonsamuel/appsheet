@@ -1,3 +1,8 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("defaults work ok", {
+	# This code assumes you have a "Driver" table
+	
+	expect_s3_class(
+		object = appsheet(tableName = "Driver"), 
+		class = "data.frame"
+	)
 })
