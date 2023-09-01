@@ -40,7 +40,13 @@ appsheet <- function(
 		httr2::req_perform() %>% 
 		httr2::resp_body_json() 
 	
-	response %>% 
+	# When Action != "Find" the response content is wrapped 
+	# inside the Rows property. really annoying
+	if ("Rows" %in% names(response)) {
+		response <- response$Rows
+	}
+	
+	response %>%
 		lapply(tibble::as_tibble) %>% 
 		purrr::list_rbind()
 }
