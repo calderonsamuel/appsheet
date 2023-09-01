@@ -26,7 +26,13 @@ with *slices* and that `appsheet()` returns all the columns as
 
 ## Installation
 
-You can install the development version of appsheet from
+You can install the stable version of appsheet from CRAN.
+
+``` r
+install.packages("appsheet")
+```
+
+Also, you can install the development version of appsheet from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -120,7 +126,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo Email           `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr> <chr>           <chr>          <chr>
-#> 1 9            arylbutd ""            ""    driverXX@compa… ""             ""
+#> 1 9            yvolgsje ""            ""    driverXX@compa… ""             ""
 ```
 
 ### Update records from a table
@@ -147,7 +153,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            arylbutd Some name     some/path.jpg driver… ""             ""
+#> 1 9            yvolgsje Some name     some/path.jpg driver… ""             ""
 ```
 
 ### Delete records from a table
@@ -171,5 +177,5 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            arylbutd Some name     some/path.jpg driver… ""             ""
+#> 1 9            yvolgsje Some name     some/path.jpg driver… ""             ""
 ```

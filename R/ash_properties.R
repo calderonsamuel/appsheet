@@ -25,7 +25,7 @@
 #' Only valid when Action is "Find".
 #' @param ... Placeholder for future properties to be introduced in the API.
 #'
-#' @return A list
+#' @return A list of properties
 #' @export
 #'
 #' @examples 

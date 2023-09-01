@@ -29,7 +29,13 @@ Have in mind that there is no evidence that the API will also work well with *sl
 
 ## Installation
 
-You can install the development version of appsheet from [GitHub](https://github.com/) with:
+You can install the stable version of appsheet from CRAN.
+
+```{r, eval=FALSE}
+install.packages("appsheet")
+```
+
+Also, you can install the development version of appsheet from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")

@@ -41,7 +41,7 @@ Only valid when Action is "Find".}
 \item{...}{Placeholder for future properties to be introduced in the API.}
 }
 \value{
-A list
+A list of properties
 }
 \description{
 This function exist to provide auto completion. Still, it is
