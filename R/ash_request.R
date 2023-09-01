@@ -42,7 +42,7 @@ ash_req_body <- function(Action = "Find", Properties = ash_properties(), Rows = 
 	good_actions <- c("Find", "Add", "Delete", "Edit")
 	
 	if(!Action %in% good_actions) {
-		cli::cli_abort('{.code Action} only supports {good_actions} actions')
+		cli::cli_abort('{.code Action} only supports {.strong {good_actions}} actions')
 	}
 	
 	if(rlang::is_empty(Properties))  {
@@ -50,11 +50,19 @@ ash_req_body <- function(Action = "Find", Properties = ash_properties(), Rows = 
 	}
 	
 	if (!is.null(Properties$Selector) && Action != "Find") {
-		cli::cli_abort('Property {.code Selector} only works with a Find action')
+		cli::cli_abort('Property {.arg Selector} only works with a {.strong Find} action')
 	}
 	
 	if (Action != "Find" && rlang::is_empty(Rows)) {
 		cli::cli_abort('{.code Rows} cant be empty when {.code Action} is {Action}')
+	}
+	
+	if ("_RowNumber" %in% names(Rows)) {
+		cli::cli_abort("Can't use column {.var _RowNumber} in requests")
+	}
+	
+	if (Action == "Add" && ("Row ID" %in% names(Rows))) {
+		cli::cli_abort("Can't use column {.var Row ID} in Add actions")
 	}
 	
 	list(

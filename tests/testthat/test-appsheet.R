@@ -43,3 +43,13 @@ test_that("fails when Rows is empty when action is not Find", {
 	appsheet(tableName = "Driver", Action = "Edit") %>%
 		expect_error()
 })
+
+test_that("fails when _RowNumber column is provided", {
+	appsheet("Driver", Rows = tibble::tibble("_RowNumber" = "a")) %>%
+		expect_error(regexp = "_RowNumber")
+})
+
+test_that("fails when 'Row ID' column is provided for Add action", {
+	appsheet("Driver", Rows = tibble::tibble("Row ID" = "a"), Action = "Add") %>%
+		expect_error(regexp = "Row ID")
+})
