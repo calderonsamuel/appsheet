@@ -4,7 +4,7 @@ test_that("Action Add and Delete work", {
 	
 	# This complicated row_key is meant to prevent key collisions 
 	# when performing multiple github actions
-	row_key <- sample(letters, size = 8, replace = TRUE) |> paste0(collapse = "")
+	row_key <- sample(letters, size = 8, replace = TRUE) %>% paste0(collapse = "")
 	
 	row_to_add <- structure(
 		.Data = list(
