@@ -32,3 +32,8 @@ test_that("fails when Selector is provided without Find action", {
 	appsheet(tableName = "Driver", Action = "Delete", Selector = "Filter(Driver, true)") %>%
 		expect_error()
 })
+
+test_that("fails when Rows is empty when action is not Find", {
+	appsheet(tableName = "Driver", Action = "Edit") %>%
+		expect_error()
+})

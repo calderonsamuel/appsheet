@@ -54,6 +54,10 @@ ash_req_body <- function(Action = "Find", Properties = ash_properties(), Rows = 
 		cli::cli_abort('{.code Selector} only works with a Find action')
 	}
 	
+	if (Action != "Find" && rlang::is_empty(Rows)) {
+		cli::cli_abort('{.code Rows} cant be empty when {.code Action} is {Action}')
+	}
+	
 	list(
 		Action = Action,
 		Properties = Properties,
