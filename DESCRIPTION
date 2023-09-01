@@ -1,5 +1,5 @@
 Package: appsheet
-Title: An interface to the 'AppSheet' API
+Title: An Interface to the 'AppSheet' API
 Version: 0.0.0.90000
 Authors@R: 
     person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre", "cph"),
