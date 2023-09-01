@@ -43,11 +43,11 @@ ash_req_body <- function(Action = "Find", Properties = ash_properties(), Rows = 
 	good_actions <- c("Find", "Add", "Delete", "Edit")
 	
 	if(!Action %in% good_actions) {
-		cli::cli_abort('{.code Action} must be one of {good_actions}')
+		cli::cli_abort('{.code Action} only supports {good_actions} actions')
 	}
 	
 	if(rlang::is_empty(Properties))  {
-		cli::cli_warn('Empty {.code Properties} might return an empty response')
+		cli::cli_abort('Empty {.code Properties} will return an empty response')
 	}
 	
 	if (!is.null(Selector) && Action != "Find") {

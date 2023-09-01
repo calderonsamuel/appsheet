@@ -17,3 +17,18 @@ test_that("fails without credentials", {
 	expect_error(appsheet("Driver", access_key = NULL))
 	expect_error(appsheet("Driver", access_key = NA))
 })
+
+test_that("fails if bad Action is provided", {
+	appsheet(tableName = "Driver", Action = "CustomMadeAction") %>%
+		expect_error()
+})
+
+test_that("warns when Properties is empty", {
+	appsheet(tableName = "Driver", Properties = NULL) %>%
+		expect_error()
+})
+
+test_that("fails when Selector is provided without Find action", {
+	appsheet(tableName = "Driver", Action = "Delete", Selector = "Filter(Driver, true)") %>%
+		expect_error()
+})
