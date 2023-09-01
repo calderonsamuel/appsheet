@@ -1,11 +1,11 @@
 Package: appsheet
-Title: Interact with the AppSheet API
-Version: 0.1.0
+Title: An interface to the 'AppSheet' API
+Version: 0.0.0.90000
 Authors@R: 
-    person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre"),
+    person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-6847-1210"))
-Description: Use the AppSheet API to Add, Delete, Read and Update table
-    records in tables related to your AppSheet apps.
+Description: Use the 'AppSheet' API to Add, Delete, Read and Update table
+    records in tables related to your 'AppSheet' apps.
 License: MIT + file LICENSE
 URL: https://github.com/calderonsamuel/appsheet
 BugReports: https://github.com/calderonsamuel/appsheet/issues

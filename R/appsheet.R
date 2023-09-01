@@ -14,7 +14,7 @@
 #' @examples
 #' \dontrun{
 #' appsheet("my_table")
-#' appsheet("my_table", Properties = list(Locale = "en-US"))
+#' appsheet("my_table", Properties = ash_properties(Locale = "en-GB"))
 #' }
 #'
 appsheet <- function(
