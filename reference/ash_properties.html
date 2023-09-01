@@ -60,6 +60,7 @@ for further customization.</p>
 <span>  RunAsUserEmail <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Timezone <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  UserSettings <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  Selector <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -94,6 +95,11 @@ of the application owner.</p></dd>
 <dt>UserSettings</dt>
 <dd><p>User setting to be used when performing the action.
 If not specified, no user settings are used.</p></dd>
+
+
+<dt>Selector</dt>
+<dd><p>Expression to select and format the rows returned.
+Only valid when Action is "Find".</p></dd>
 
 
 <dt>...</dt>

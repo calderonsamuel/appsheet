@@ -55,7 +55,6 @@
 <span>  Action <span class="op">=</span> <span class="st">"Find"</span>,</span>
 <span>  Properties <span class="op">=</span> <span class="fu"><a href="ash_properties.html">ash_properties</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  Rows <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  Selector <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  appId <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"APPSHEET_APP_ID"</span><span class="op">)</span>,</span>
 <span>  access_key <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"APPSHEET_APP_ACCESS_KEY"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -68,7 +67,8 @@
 
 
 <dt>Action</dt>
-<dd><p>The action to be performed on the table. Default is "Find", which reads a table.</p></dd>
+<dd><p>The action to be performed on the table, one of ("Find", "Add", "Delete", "Edit").
+Default is "Find", which reads a table.</p></dd>
 
 
 <dt>Properties</dt>
@@ -77,10 +77,6 @@
 
 <dt>Rows</dt>
 <dd><p>A list of rows for the action. Default is an empty list.</p></dd>
-
-
-<dt>Selector</dt>
-<dd><p>Expression to select and format the rows returned. Only valid when Action is "Find".</p></dd>
 
 
 <dt>appId</dt>
