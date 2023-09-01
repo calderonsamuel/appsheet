@@ -10,6 +10,7 @@ ash_properties(
   RunAsUserEmail = NULL,
   Timezone = NULL,
   UserSettings = NULL,
+  Selector = NULL,
   ...
 )
 }
@@ -33,6 +34,9 @@ of the application owner.}
 
 \item{UserSettings}{User setting to be used when performing the action.
 If not specified, no user settings are used.}
+
+\item{Selector}{Expression to select and format the rows returned.
+Only valid when Action is "Find".}
 
 \item{...}{Placeholder for future properties to be introduced in the API.}
 }

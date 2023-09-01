@@ -22,7 +22,6 @@ appsheet <- function(
 		Action = "Find", 
 		Properties = ash_properties(), 
 		Rows = list(),
-		Selector = NULL,
 		appId = Sys.getenv("APPSHEET_APP_ID"),
 		access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 ) {
@@ -31,7 +30,6 @@ appsheet <- function(
 			Action = Action,
 			Properties = Properties,
 			Rows = Rows,
-			Selector = Selector,
 			appId = appId,
 			access_key = access_key
 		)

@@ -9,7 +9,6 @@ appsheet(
   Action = "Find",
   Properties = ash_properties(),
   Rows = list(),
-  Selector = NULL,
   appId = Sys.getenv("APPSHEET_APP_ID"),
   access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY")
 )
@@ -17,13 +16,12 @@ appsheet(
 \arguments{
 \item{tableName}{The name of the table to perform actions on.}
 
-\item{Action}{The action to be performed on the table. Default is "Find", which reads a table.}
+\item{Action}{The action to be performed on the table, one of ("Find", "Add", "Delete", "Edit").
+Default is "Find", which reads a table.}
 
 \item{Properties}{A list of properties for the action. \code{ash_properties()} provides sensible defaults, but can be customized.}
 
 \item{Rows}{A list of rows for the action. Default is an empty list.}
-
-\item{Selector}{Expression to select and format the rows returned. Only valid when Action is "Find".}
 
 \item{appId}{The AppSheet application ID. Default is retrieved from the APPSHEET_APP_ID environment variable.}
 

@@ -21,6 +21,8 @@
 #' @param Timezone Timezone of the client making the request.
 #' @param UserSettings User setting to be used when performing the action. 
 #' If not specified, no user settings are used.
+#' @param Selector Expression to select and format the rows returned. 
+#' Only valid when Action is "Find".
 #' @param ... Placeholder for future properties to be introduced in the API.
 #'
 #' @return A list
@@ -35,6 +37,7 @@ ash_properties <- function(
 		RunAsUserEmail = NULL,
 		Timezone = NULL,
 		UserSettings = NULL,
+		Selector = NULL,
 		...
 ) {
 	list(
@@ -43,6 +46,7 @@ ash_properties <- function(
 		RunAsUserEmail = RunAsUserEmail,
 		Timezone = Timezone,
 		UserSettings = UserSettings,
+		Selector = Selector,
 		...
 	) %>%
 		purrr::discard(is.null)
