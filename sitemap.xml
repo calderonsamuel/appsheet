@@ -19,6 +19,12 @@
     <loc>/reference/appsheet.html</loc>
   </url>
   <url>
+    <loc>/reference/ash_properties.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ash_request.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
   </url>
 </urlset>
