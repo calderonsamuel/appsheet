@@ -29,7 +29,13 @@ test_that("warns when Properties is empty", {
 })
 
 test_that("fails when Selector is provided without Find action", {
-	appsheet(tableName = "Driver", Action = "Delete", Selector = "Filter(Driver, true)") %>%
+	appsheet(
+		tableName = "Driver", 
+		Action = "Delete",
+		Properties = ash_properties(
+			Selector = "Filter(Driver, true)"
+		)
+	) %>%
 		expect_error()
 })
 
