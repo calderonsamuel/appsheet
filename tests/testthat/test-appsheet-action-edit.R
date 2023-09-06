@@ -9,3 +9,10 @@ test_that("Action Edit works", {
 	appsheet(tableName = "Driver", Action = "Edit", Rows = row_to_modify) %>%
 		expect_s3_class(class = "data.frame")
 })
+
+test_that("Action edit works in appsheet database", {
+	row_to_modify <- tibble::tibble(`Row ID` = "BXHrK70k6c4gA7oHmimo10")
+	
+	appsheet_alt(tableName = "items", Action = "Edit", Rows = row_to_modify) %>%
+		expect_s3_class(class = "data.frame")
+})

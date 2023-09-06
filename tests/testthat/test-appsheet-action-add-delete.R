@@ -27,3 +27,19 @@ test_that("Action Add and Delete work", {
 	appsheet(tableName = "Driver", Action = "Delete", Rows = row_to_delete) %>%
 		expect_s3_class(class = "data.frame")
 })
+
+test_that("Action Add and Delete work in appsheet database", {
+	# We test these together to take advantage of parallel testing 
+	# without adding infinte rows per check()
+	
+	# Here we don't use a custom key because the database returns a Row ID
+	
+	row_to_add <- tibble::tibble(Title = "Item 99")
+	
+	row_added <- appsheet_alt(tableName = "items", Action = "Add", Rows = row_to_add) %>%
+		expect_s3_class(class = "data.frame")
+	
+	# We can just pass the row_added to the delete action and it works
+	appsheet_alt(tableName = "items", Action = "Delete", Rows = row_added) %>%
+		expect_s3_class(class = "data.frame")
+})

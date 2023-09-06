@@ -45,6 +45,16 @@ appsheet <- function(
 	}
 	
 	response %>%
-		lapply(tibble::as_tibble) %>% 
+		purrr::map(~ purrr::discard(.x, is.null)) %>% # discards NULL columns from appsheet DB
+		purrr::map(tibble::as_tibble) %>% 
 		purrr::list_rbind()
+}
+
+# This one exists here to be loaded for unit testing
+appsheet_alt <- function(...) {
+	appsheet(
+		...,
+		appId = Sys.getenv("APPSHEET_APP_ID_ALT"),
+		access_key = Sys.getenv("APPSHEET_APP_ACCESS_KEY_ALT")
+	)
 }
