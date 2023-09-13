@@ -1,7 +1,7 @@
 #' Appsheet Function
 #'
 #' This function interacts with the AppSheet API to perform actions on a specified table. 
-#' For more info, check the [official documentation](https://support.google.com/appsheet/answer/10105768?hl=en&ref_topic=10105767&sjid=5773035771729381163-SA).
+#' For more info, check the [official documentation](https://support.google.com/appsheet/answer/10105768).
 #'
 #' @inheritParams ash_request
 #'

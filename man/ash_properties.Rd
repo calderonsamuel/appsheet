@@ -45,7 +45,7 @@ A list of properties
 }
 \description{
 This function exist to provide auto completion. Still, it is
-likely that users will need to visit the \href{https://support.google.com/appsheet/answer/10105398?hl=en&ref_topic=10105767&sjid=10290494026986339725-SA}{official documentation}
+likely that users will need to visit the \href{https://support.google.com/appsheet/answer/10105398}{official documentation}
 for further customization.
 }
 \details{

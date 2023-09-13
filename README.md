@@ -43,7 +43,7 @@ remotes::install_github("calderonsamuel/appsheet")
 ## Authentication
 
 The first step is to [Enable the API for cloud-based service
-communication](https://support.google.com/appsheet/answer/10105769?hl=en&ref_topic=10105767&sjid=7476345061548698748-SA).
+communication](https://support.google.com/appsheet/answer/10105769).
 Once this is done you should have:
 
 1.  The App ID. Use it in the `appId` argument of `appsheet()` or via
@@ -126,7 +126,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo Email           `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr> <chr>           <chr>          <chr>
-#> 1 9            yvolgsje ""            ""    driverXX@compa… ""             ""
+#> 1 9            uvweoplh ""            ""    driverXX@compa… ""             ""
 ```
 
 ### Update records from a table
@@ -153,7 +153,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            yvolgsje Some name     some/path.jpg driver… ""             ""
+#> 1 9            uvweoplh Some name     some/path.jpg driver… ""             ""
 ```
 
 ### Delete records from a table
@@ -177,5 +177,5 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            yvolgsje Some name     some/path.jpg driver… ""             ""
+#> 1 9            uvweoplh Some name     some/path.jpg driver… ""             ""
 ```

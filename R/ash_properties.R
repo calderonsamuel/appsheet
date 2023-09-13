@@ -1,7 +1,7 @@
 #' Build the properties of an Appsheet request
 #' 
 #' This function exist to provide auto completion. Still, it is 
-#' likely that users will need to visit the [official documentation](https://support.google.com/appsheet/answer/10105398?hl=en&ref_topic=10105767&sjid=10290494026986339725-SA)
+#' likely that users will need to visit the [official documentation](https://support.google.com/appsheet/answer/10105398)
 #' for further customization.
 #' 
 #' Any NULL will be internally dropped before performing the request.
