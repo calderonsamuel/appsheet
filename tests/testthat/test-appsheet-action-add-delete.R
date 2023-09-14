@@ -1,4 +1,5 @@
 test_that("Action Add and Delete work", {
+	skip_on_cran()
 	# We test these together to take advantage of parallel testing 
 	# without adding infinte rows per check()
 	
@@ -29,6 +30,7 @@ test_that("Action Add and Delete work", {
 })
 
 test_that("Action Add and Delete work in appsheet database", {
+	skip_on_cran()
 	# We test these together to take advantage of parallel testing 
 	# without adding infinte rows per check()
 	
