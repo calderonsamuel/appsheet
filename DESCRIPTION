@@ -5,7 +5,7 @@ Authors@R:
     person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-6847-1210"))
 Description: Functionality to add, delete, read and update table
-    records from your 'AppSheet' apps, using the 'Appsheet' API <https://api.appsheet.com/>.
+    records from your 'AppSheet' apps, using the official API <https://api.appsheet.com/>.
 License: MIT + file LICENSE
 URL: https://github.com/calderonsamuel/appsheet
 BugReports: https://github.com/calderonsamuel/appsheet/issues
