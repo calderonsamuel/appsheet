@@ -2,7 +2,7 @@
 
 This is a resubmission. In this version I have:
 
-* Fixed the error in CRAN check for failing tests
+* Reformatted the description of the DESCRIPTION file to include the a web reference for the API.
 
 ## R CMD check results
 
