@@ -1,6 +1,6 @@
 Package: appsheet
 Title: An Interface to the 'AppSheet' API
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: 
     person("Samuel", "Calderon", , "samuel.calderon@uarm.pe", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-6847-1210"))
