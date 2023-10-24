@@ -8,10 +8,11 @@
 [![Codecov test
 coverage](https://codecov.io/gh/calderonsamuel/appsheet/branch/main/graph/badge.svg)](https://app.codecov.io/gh/calderonsamuel/appsheet?branch=main)
 [![R-CMD-check](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/appsheet)](https://CRAN.R-project.org/package=appsheet)
+[![](http://cranlogs.r-pkg.org/badges/last-month/appsheet)](https://cran.r-project.org/package=appsheet)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 <!-- badges: end -->
 
 The goal of appsheet is to provide an easy way to use the Appsheet API
@@ -128,7 +129,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo Email           `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr> <chr>           <chr>          <chr>
-#> 1 9            uksbawnc ""            ""    driverXX@compa… ""             ""
+#> 1 9            dgxshjuf ""            ""    driverXX@compa… ""             ""
 ```
 
 ### Update records from a table
@@ -155,7 +156,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            uksbawnc Some name     some/path.jpg driver… ""             ""
+#> 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""
 ```
 
 ### Delete records from a table
@@ -179,5 +180,5 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            uksbawnc Some name     some/path.jpg driver… ""             ""
+#> 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""
 ```
