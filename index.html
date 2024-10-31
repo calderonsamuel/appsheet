@@ -6,21 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>An Interface to the AppSheet API • appsheet</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="An Interface to the AppSheet API">
-<meta property="og:description" content="Functionality to add, delete, read and update table
-    records from your AppSheet apps, using the official API &lt;https://api.appsheet.com/&gt;.">
+<meta property="og:description" content="Functionality to add, delete, read and update table records from your AppSheet apps, using the official API &lt;https://api.appsheet.com/&gt;.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -51,7 +50,7 @@
 <li>
   <a href="https://github.com/calderonsamuel/appsheet/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -62,7 +61,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="contents col-md-9">
@@ -80,10 +79,10 @@
 <p>You can install the stable version of appsheet from CRAN.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"appsheet"</span><span class="op">)</span></span></code></pre></div>
-<p>Also, you can install the development version of appsheet from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>Also, you can install the development version of appsheet from <a href="https://github.com/calderonsamuel/appsheet" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"calderonsamuel/appsheet"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"calderonsamuel/appsheet"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="authentication">Authentication<a class="anchor" aria-label="anchor" href="#authentication"></a>
@@ -147,7 +146,7 @@
 <span><span class="co">#&gt; # A tibble: 1 × 7</span></span>
 <span><span class="co">#&gt;   `_RowNumber` Key      `Driver Name` Photo Email           `Phone Number` Jobs </span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;</span></span>
-<span><span class="co">#&gt; 1 9            dgxshjuf ""            ""    driverXX@compa… ""             ""</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 9            lmnaukce ""            ""    driverXX@compa… ""             ""</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="update-records-from-a-table">Update records from a table<a class="anchor" aria-label="anchor" href="#update-records-from-a-table"></a>
@@ -167,7 +166,7 @@
 <span><span class="co">#&gt; # A tibble: 1 × 7</span></span>
 <span><span class="co">#&gt;   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs </span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;</span></span>
-<span><span class="co">#&gt; 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 9            lmnaukce Some name     some/path.jpg driver… ""             ""</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="delete-records-from-a-table">Delete records from a table<a class="anchor" aria-label="anchor" href="#delete-records-from-a-table"></a>
@@ -185,7 +184,7 @@
 <span><span class="co">#&gt; # A tibble: 1 × 7</span></span>
 <span><span class="co">#&gt;   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs </span></span>
 <span><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;</span></span>
-<span><span class="co">#&gt; 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 9            lmnaukce Some name     some/path.jpg driver… ""             ""</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -230,8 +229,8 @@
 <li><a href="https://app.codecov.io/gh/calderonsamuel/appsheet?branch=main" class="external-link"><img src="https://codecov.io/gh/calderonsamuel/appsheet/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://CRAN.R-project.org/package=appsheet" class="external-link"><img src="https://www.r-pkg.org/badges/version/appsheet" alt="CRAN status"></a></li>
-<li><a href="https://cran.r-project.org/package=appsheet" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/last-month/appsheet"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://r-pkg.org/pkg/appsheet" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/last-month/appsheet?color=blue" alt="CRAN RStudio mirror downloads"></a></li>
 </ul>
 </div>
 
@@ -246,16 +245,16 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer>
 </div>
 
-  
 
 
-  
+
+
 
   </body>
 </html>
