@@ -10,9 +10,10 @@ coverage](https://codecov.io/gh/calderonsamuel/appsheet/branch/main/graph/badge.
 [![R-CMD-check](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/calderonsamuel/appsheet/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/appsheet)](https://CRAN.R-project.org/package=appsheet)
-[![](http://cranlogs.r-pkg.org/badges/last-month/appsheet)](https://cran.r-project.org/package=appsheet)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/last-month/appsheet?color=blue)](https://r-pkg.org/pkg/appsheet)
 <!-- badges: end -->
 
 The goal of appsheet is to provide an easy way to use the Appsheet API
@@ -36,11 +37,11 @@ install.packages("appsheet")
 ```
 
 Also, you can install the development version of appsheet from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/calderonsamuel/appsheet) with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("calderonsamuel/appsheet")
+# install.packages("pak")
+pak::pak("calderonsamuel/appsheet")
 ```
 
 ## Authentication
@@ -129,7 +130,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo Email           `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr> <chr>           <chr>          <chr>
-#> 1 9            dgxshjuf ""            ""    driverXX@compa… ""             ""
+#> 1 9            lmnaukce ""            ""    driverXX@compa… ""             ""
 ```
 
 ### Update records from a table
@@ -156,7 +157,7 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""
+#> 1 9            lmnaukce Some name     some/path.jpg driver… ""             ""
 ```
 
 ### Delete records from a table
@@ -180,5 +181,5 @@ appsheet(
 #> # A tibble: 1 × 7
 #>   `_RowNumber` Key      `Driver Name` Photo         Email   `Phone Number` Jobs 
 #>   <chr>        <chr>    <chr>         <chr>         <chr>   <chr>          <chr>
-#> 1 9            dgxshjuf Some name     some/path.jpg driver… ""             ""
+#> 1 9            lmnaukce Some name     some/path.jpg driver… ""             ""
 ```
